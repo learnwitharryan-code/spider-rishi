@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════
+   EARTH-616 — Peter Parker / Default Theme
+   ═══════════════════════════════════════════════════ */
+:root {
+  --theme-bg: #09090b;
+  --theme-accent: #e8001c;
+  --theme-accent-alt: #2563eb;
+}
+
+/* ═══════════════════════════════════════════════════
+   CUSTOM CURSOR — Hide native cursor for custom one
+   ═══════════════════════════════════════════════════ */
+@media (pointer: fine) {
+  html:not(.standalone-document) *,
+  html:not(.standalone-document) a,
+  html:not(.standalone-document) button {
+    cursor: none !important;
+  }
+}
+
+html {
+  /* scroll-behavior handled by SmoothScrollProvider */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--theme-bg, #0d0d0d);
+  background-image:
+    linear-gradient(to right, rgba(232, 0, 28, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 0, 28, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  color: #f0f0f0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
+}
+
+html.standalone-document,
+body.standalone-document {
+  overflow: auto;
+}
+
+body.standalone-document {
+  background: #e8e8e8;
+  background-image: none;
+  color: #333333;
+}
+
+body.standalone-document::after {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html.standalone-document,
+  body.standalone-document {
+    height: auto;
+    overflow: visible;
+    background: #fafaf8;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   HOVER GLITCH — Subtle accent color on hover
+   ═══════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: no-preference) {
+  .hover-glitch {
+    display: inline-block;
+    transition: color 0.2s;
+  }
+
+  .hover-glitch:hover {
+    color: var(--theme-accent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-glitch:hover {
+    color: var(--theme-accent);
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   SPIDEY GLITCH — Chromatic aberration flash on accent text
+   ═══════════════════════════════════════════════════ */
+@keyframes spidey-glitch-anim {
+  0% { text-shadow: 2px 0 rgba(232,0,28,0.7), -2px 0 rgba(37,99,235,0.7); }
+  20% { text-shadow: -1px 0 rgba(232,0,28,0.5), 1px 0 rgba(37,99,235,0.5); }
+  40% { text-shadow: 1px 0 rgba(232,0,28,0.3), -1px 0 rgba(37,99,235,0.3); }
+  60% { text-shadow: -0.5px 0 rgba(232,0,28,0.2), 0.5px 0 rgba(37,99,235,0.2); }
+  100% { text-shadow: none; }
+}
+
+.spidey-glitch {
+  animation: spidey-glitch-anim 0.4s ease-out forwards;
+}
+
+.spider-sense-pulse {
+  position: relative;
+}
+
+.spider-sense-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  z-index: -1;
+  border: 1px solid rgba(232, 0, 28, 0.42);
+  border-radius: inherit;
+  opacity: 0;
+  transform: scale(0.92);
+  animation: spider-sense-pulse 2.4s ease-out infinite;
+}
+
+@keyframes spider-sense-pulse {
+  0% {
+    opacity: 0.62;
+    transform: scale(0.92);
+  }
+
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.22);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spider-sense-pulse::before {
+    animation: none;
+  }
+}

@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#E8001C"/>
+  <line x1="16" y1="16" x2="2" y2="2" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <line x1="16" y1="16" x2="9" y2="2" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <line x1="16" y1="16" x2="16" y2="2" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <line x1="16" y1="16" x2="23" y2="2" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <line x1="16" y1="16" x2="30" y2="2" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <line x1="16" y1="16" x2="2" y2="16" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <line x1="16" y1="16" x2="30" y2="16" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <line x1="16" y1="16" x2="2" y2="30" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <line x1="16" y1="16" x2="30" y2="30" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <polygon points="21,16 19.4,19.4 16,21 12.6,19.4 11,16 12.6,12.6 16,11 19.4,12.6" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <polygon points="25,16 22,22 16,25 10,22 7,16 10,10 16,7 22,10" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+  <polygon points="29,16 25,24 16,29 7,24 3,16 7,8 16,3 25,8" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="0.8"/>
+</svg>

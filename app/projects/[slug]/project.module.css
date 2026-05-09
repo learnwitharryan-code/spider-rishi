@@ -1,0 +1,229 @@
+.shell {
+  min-height: 100dvh;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(232, 0, 28, 0.2), transparent 32%),
+    radial-gradient(circle at 88% 12%, rgba(37, 99, 235, 0.18), transparent 30%),
+    #09090b;
+  color: #f8fafc;
+  font-family: var(--font-inter), Inter, sans-serif;
+}
+
+.shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle at center, black, transparent 78%);
+}
+
+.nav,
+.hero,
+.grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: #71717a;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.055);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 78px 0 42px;
+}
+
+.kicker,
+.panelLabel {
+  color: var(--theme-accent);
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 940px;
+  margin: 12px 0 18px;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(4rem, 11vw, 9rem);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero p:not(.kicker) {
+  max-width: 680px;
+  color: #a1a1aa;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 12px 16px;
+  border: 1px solid rgba(232, 0, 28, 0.5);
+  border-radius: 999px;
+  background: rgba(232, 0, 28, 0.12);
+  color: #ffffff;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  padding-bottom: 48px;
+}
+
+.panel {
+  grid-column: span 4;
+  min-height: 240px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(18, 18, 24, 0.74);
+  backdrop-filter: blur(16px);
+}
+
+.largePanel {
+  grid-column: span 8;
+}
+
+.panel h2 {
+  margin-top: 12px;
+  color: #ffffff;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(1.7rem, 3.4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.tags span {
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #d4d4d8;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.highlights {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+  color: #d4d4d8;
+  line-height: 1.65;
+  list-style: none;
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.highlights li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--theme-accent);
+}
+
+.linkList {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.linkList a {
+  color: #ffffff;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel,
+  .largePanel {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .shell {
+    padding: 16px;
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 54px;
+  }
+}
