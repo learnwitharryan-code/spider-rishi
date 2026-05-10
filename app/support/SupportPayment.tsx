@@ -6,7 +6,7 @@ import QRCode from "qrcode";
 import { Check, Copy, ExternalLink, IndianRupee, Smartphone } from "lucide-react";
 import styles from "./support.module.css";
 
-const upiId = "rishisingh700-1@oksbi";
+const upiId = "rishusinghrk045-1@okaxis";
 const payeeName = "Rishi Singh";
 
 const tipOptions = [
