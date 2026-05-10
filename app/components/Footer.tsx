@@ -13,7 +13,7 @@ export default function Footer() {
   const { scrollTo } = useSmoothScroll();
 
   return (
-    <footer className="bg-[var(--theme-bg)] border-t border-zinc-800/60 px-6 md:px-16 lg:px-24 py-12">
+    <footer className="bg-[var(--theme-bg)] border-t border-zinc-800/60 px-5 md:px-16 lg:px-24 py-12">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         {/* Wordmark */}
         <motion.div
@@ -151,7 +151,8 @@ export default function Footer() {
           style={{ fontFamily: "var(--font-space-grotesk)" }}
         >
           Built with{" "}
-          <span style={{ color: "var(--theme-accent)" }}>Next.js</span> &amp;
+          <span style={{ color: "var(--theme-accent)" }}>Next.js</span>
+          {" & "}
           Framer Motion
         </p>
       </div>

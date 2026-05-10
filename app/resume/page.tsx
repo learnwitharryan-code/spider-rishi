@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import styles from "./resume.module.css";
 
 const resumePdf = "/RishiSingh.pdf";
@@ -44,7 +45,7 @@ const jsonLd = {
 export default function ResumePage() {
   return (
     <main className={styles.shell}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Script id="resume-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <header className={styles.toolbar}>
         <Link className={styles.homeLink} href="/">

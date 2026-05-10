@@ -23,7 +23,7 @@ const educationData = [
 
 export default function Education() {
   return (
-    <section id="education" className="bg-[var(--theme-bg)] border-t border-zinc-800/60 px-6 md:px-16 lg:px-24 py-24">
+    <section id="education" className="bg-[var(--theme-bg)] border-t border-zinc-800/60 px-5 md:px-16 lg:px-24 py-24">
       <motion.div
         initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
         className="flex items-center gap-6 mb-6"
@@ -63,7 +63,7 @@ export default function Education() {
             viewport={{ once: true }}
             transition={{ duration: 0.65, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className={`group relative flex flex-col justify-between p-8 border rounded-2xl min-h-[220px] transition-all duration-300 overflow-hidden hover:-translate-y-1
+            <div className={`group relative flex flex-col justify-between p-6 md:p-8 border rounded-2xl min-h-[220px] transition-all duration-300 overflow-hidden hover:-translate-y-1
               ${edu.accent
                 ? "border-[var(--theme-accent)]/30 bg-[var(--theme-accent)]/[0.05] hover:bg-[var(--theme-accent)]/[0.09]"
                 : "border-zinc-800 bg-zinc-900/30 hover:border-zinc-700"

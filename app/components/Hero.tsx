@@ -309,7 +309,7 @@ export default function Hero() {
           <div className="absolute inset-0 z-[4] bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
 
           <motion.div
-            className="absolute bottom-10 left-10 pointer-events-none"
+            className="absolute bottom-10 left-6 md:left-10 pointer-events-none"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
@@ -342,7 +342,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-              className="spider-sense-pulse mt-5 inline-flex items-center gap-2 text-[10px] tracking-[0.25em] uppercase px-5 py-2.5 transition-all duration-300 pointer-events-auto border border-zinc-700 bg-black/40 text-zinc-300 hover:border-[var(--theme-accent)] hover:text-white hover:shadow-[0_0_15px_rgba(232,0,28,0.3)] rounded-full"
+              className="spider-sense-pulse mt-5 inline-flex items-center gap-2 text-[10px] tracking-[0.25em] uppercase px-5 py-3.5 transition-all duration-300 pointer-events-auto border border-zinc-700 bg-black/40 text-zinc-300 hover:border-[var(--theme-accent)] hover:text-white hover:shadow-[0_0_15px_rgba(232,0,28,0.3)] rounded-full"
               style={{ fontFamily: "var(--font-space-grotesk)" }}
             >
               <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
@@ -353,7 +353,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="absolute bottom-10 right-10 flex flex-col items-center gap-2 pointer-events-none transition-all duration-300"
+            className="absolute bottom-10 right-6 md:right-10 flex flex-col items-center gap-2 pointer-events-none transition-all duration-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}

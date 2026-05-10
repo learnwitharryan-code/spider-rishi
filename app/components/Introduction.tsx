@@ -130,7 +130,7 @@ export default function Introduction() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative bg-[var(--theme-bg)] px-6 md:px-16 lg:px-24 pt-32 pb-24 overflow-hidden"
+      className="relative bg-[var(--theme-bg)] px-5 md:px-16 lg:px-24 pt-32 pb-24 overflow-hidden"
     >
       {/* Spider web — stronger now */}
       <SpiderWebBg className="absolute inset-0" opacity={0.11} />
@@ -183,7 +183,7 @@ export default function Introduction() {
         className="font-bold leading-[0.92] tracking-tight uppercase"
         style={{
           fontFamily: "var(--font-space-grotesk)",
-          fontSize: "clamp(2.8rem, 8vw, 9rem)",
+          fontSize: "clamp(2.2rem, 5vw, 4rem)",
         }}
       >
         {lines.map((segments, i) => (

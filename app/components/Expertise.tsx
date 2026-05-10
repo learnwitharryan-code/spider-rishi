@@ -140,7 +140,7 @@ function Panel({
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative flex-1 flex flex-col px-8 md:px-12 lg:px-16 py-16 overflow-hidden"
+      className="relative flex-1 flex flex-col px-6 md:px-12 lg:px-16 py-16 overflow-hidden"
       style={{ rotateX, rotateY, background: bg, transformStyle: "preserve-3d" }}
     >
       {/* Corner web SVG */}
@@ -177,7 +177,7 @@ function Panel({
         className="absolute select-none pointer-events-none font-black leading-none z-0"
         style={{
           fontFamily: "var(--font-space-grotesk)",
-          fontSize: "clamp(10rem, 20vw, 22rem)",
+          fontSize: "clamp(6rem, 20vw, 22rem)",
           color: accent,
           opacity: 0.04,
           right: align === "left" ? "-0.05em" : "auto",
@@ -193,7 +193,7 @@ function Panel({
         className="relative z-10 font-black uppercase leading-[0.88] whitespace-pre-line mb-4"
         style={{
           fontFamily: "var(--font-space-grotesk)",
-          fontSize: "clamp(3rem, 6vw, 6.5rem)",
+          fontSize: "clamp(2.5rem, 6vw, 6.5rem)",
           color: "#fff",
         }}
       >
@@ -259,7 +259,7 @@ export default function Expertise() {
   return (
     <section id="expertise" className="relative overflow-hidden border-t border-zinc-800/60">
       {/* Section overline */}
-      <div className="relative bg-[var(--theme-bg)] px-6 md:px-16 lg:px-24 py-8 flex items-center gap-6 z-10">
+      <div className="relative bg-[var(--theme-bg)] px-5 md:px-16 lg:px-24 py-8 flex items-center gap-6 z-10">
         <span
           className="text-[11px] tracking-[0.3em] uppercase text-zinc-600"
           style={{ fontFamily: "var(--font-space-grotesk)" }}

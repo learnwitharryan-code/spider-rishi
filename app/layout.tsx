@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Bangers } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { AppChrome } from "./components/AppChrome";
 import { projects } from "./data/projects";
@@ -159,12 +160,15 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${bangers.variable} antialiased bg-[var(--theme-bg)]`}
+        suppressHydrationWarning
       >
-        <script
+        <Script
+          id="ld-json"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([personJsonLd, websiteJsonLd, portfolioJsonLd]) }}
         />
-        <script
+        <Script
+          id="sw-unregister"
           dangerouslySetInnerHTML={{
             __html: `
               if ('serviceWorker' in navigator) {

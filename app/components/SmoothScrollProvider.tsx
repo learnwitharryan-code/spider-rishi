@@ -56,7 +56,13 @@ export function SmoothScrollProvider({ children, overlays }: { children: React.R
   const rafId = useRef(0);
 
   /* ── Tuning constants ─────────────────────────────────── */
-  const SMOOTH_FACTOR = 0.08;
+  const smoothFactorRef = useRef(0.08);
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.matchMedia("(pointer: coarse)").matches) {
+      smoothFactorRef.current = 0.12;
+    }
+  }, []);
+  const SMOOTH_FACTOR = smoothFactorRef.current;
   const INERTIA_MULTIPLIER = 5;
   const INERTIA_DECAY = 0.95;
 
@@ -91,7 +97,7 @@ export function SmoothScrollProvider({ children, overlays }: { children: React.R
 
     // Lerp
     const prev = s.currentY;
-    s.currentY += (s.targetY - s.currentY) * SMOOTH_FACTOR;
+    s.currentY += (s.targetY - s.currentY) * smoothFactorRef.current;
 
     // Snap
     if (Math.abs(s.targetY - s.currentY) < 0.05) s.currentY = s.targetY;

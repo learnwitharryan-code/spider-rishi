@@ -110,7 +110,7 @@ export default function Experience() {
     >
       <SpiderWebBg className="absolute inset-0" opacity={0.05} />
 
-      <div className="relative px-6 md:px-16 lg:px-24 py-24">
+      <div className="relative px-5 md:px-16 lg:px-24 py-24">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

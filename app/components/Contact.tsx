@@ -25,7 +25,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0, rotate: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 100, damping: 15 }}
-          className="relative bg-black/60 backdrop-blur-xl border border-zinc-700/50 p-10 md:p-16 rounded-3xl shadow-2xl overflow-hidden group"
+          className="relative bg-black/60 backdrop-blur-xl border border-zinc-700/50 p-6 md:p-16 rounded-3xl shadow-2xl overflow-hidden group"
         >
           <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.06]">
             <svg width="300" height="300" viewBox="0 0 100 100" fill="white">
@@ -47,7 +47,7 @@ export default function Contact() {
           </motion.div>
 
           <h2
-            className="text-4xl md:text-6xl font-black uppercase tracking-tight text-white mb-6 leading-[1.1]"
+            className="text-3xl sm:text-6xl font-black uppercase tracking-tight text-white mb-6 leading-[1.1]"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Looking for a <br />
@@ -57,7 +57,7 @@ export default function Contact() {
           </h2>
 
           <p
-            className="text-zinc-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed mb-12"
+            className="text-zinc-400 text-base md:text-xl font-medium max-w-2xl mx-auto leading-relaxed mb-12"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Got a project that needs saving? Or a team that needs a web-slinger?

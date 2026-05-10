@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { Bug, Home } from "lucide-react";
 import { SupportPayment } from "./SupportPayment";
 import styles from "./support.module.css";
@@ -52,7 +53,7 @@ const jsonLd = {
 export default function SupportPage() {
   return (
     <main className={styles.shell}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Script id="support-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <header className={styles.header}>
         <Link className={styles.home} href="/">

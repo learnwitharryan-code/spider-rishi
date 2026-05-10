@@ -117,7 +117,7 @@ function SkillCard({ skill, index }: { skill: typeof skills[0]; index: number })
       }}
       aria-label="Skill Card"
       className={`group relative flex flex-col justify-between p-6 overflow-hidden bg-gradient-to-br from-zinc-900/40 to-transparent border rounded-xl transition-all duration-500 hover:-translate-y-2
-        ${skill.featured ? "md:col-span-2 min-h-[200px]" : "min-h-[160px]"}
+        ${skill.featured ? "col-span-2 md:col-span-2 min-h-[200px]" : "min-h-[160px]"}
         ${skill.accent
           ? "border-[var(--theme-accent)]/20 hover:border-[var(--theme-accent)]/40 hover:bg-zinc-800/30 hover:shadow-[0_0_30px_rgba(232,0,28,0.15)]"
           : "border-zinc-800/80 hover:border-zinc-600 hover:bg-zinc-800/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.03)]"
@@ -188,7 +188,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative bg-[var(--theme-bg)] border-t border-zinc-800/60 px-6 md:px-16 lg:px-24 py-24 overflow-hidden"
+      className="relative bg-[var(--theme-bg)] border-t border-zinc-800/60 px-5 md:px-16 lg:px-24 py-24 overflow-hidden"
     >
       {/* Background Web */}
       <SpiderWebBg className="absolute inset-0 pointer-events-none z-0" opacity={0.06} />
@@ -214,7 +214,7 @@ export default function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold text-white leading-none uppercase"
+          className="text-4xl sm:text-7xl font-bold text-white leading-none uppercase"
           style={{ fontFamily: "var(--font-space-grotesk)" }}
         >
           Technical

@@ -109,14 +109,14 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
     >
       <div className={`relative grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-sm border border-zinc-800/80 bg-zinc-950/60 transition-all duration-500 hover:border-zinc-600/80 hover:bg-zinc-900/60`}>
         {/* ── Left: Content ── */}
-        <div className={`relative flex flex-col justify-center p-8 md:p-10 lg:p-12 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
+        <div className={`relative flex flex-col justify-center p-6 md:p-10 lg:p-12 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
           {/* Background watermark */}
           <span
             aria-hidden="true"
             className="absolute select-none pointer-events-none font-black leading-none z-0"
             style={{
               fontFamily: "var(--font-space-grotesk)",
-              fontSize: "clamp(8rem, 16vw, 14rem)",
+              fontSize: "clamp(5rem, 16vw, 14rem)",
               color: "rgba(232,0,28,0.05)",
               right: isEven ? "-0.05em" : "auto",
               left: isEven ? "auto" : "-0.05em",
@@ -139,7 +139,7 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
               className="font-black text-white leading-[0.95] uppercase mb-5 transition-colors duration-300 group-hover:text-[var(--theme-accent)]"
               style={{
                 fontFamily: "var(--font-space-grotesk)",
-                fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                fontSize: "clamp(2rem, 5vw, 4rem)",
               }}
             >
               {project.title}
@@ -460,7 +460,7 @@ export default function Projects() {
   return (
     <section
       id="work"
-      className="bg-[var(--theme-bg)] border-t border-zinc-800/60 px-6 md:px-16 lg:px-24 py-24"
+      className="bg-[var(--theme-bg)] border-t border-zinc-800/60 px-5 md:px-16 lg:px-24 py-24"
     >
       {/* Section overline */}
       <motion.div
@@ -485,7 +485,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl lg:text-8xl font-black text-white leading-none uppercase z-10"
+          className="text-4xl sm:text-6xl lg:text-8xl font-black text-white leading-none uppercase z-10"
           style={{ fontFamily: "var(--font-space-grotesk)" }}
         >
           Selected
@@ -502,8 +502,8 @@ export default function Projects() {
           className="max-w-xs text-zinc-500 text-sm leading-relaxed md:text-right"
           style={{ fontFamily: "var(--font-inter)" }}
         >
-          &ldquo;It doesn&apos;t matter where you start, it&apos;s{" "}
-          <em className="text-zinc-300 not-italic font-medium">how</em> you build from there.&rdquo;
+          "It doesn't matter where you start, it's{" "}
+          <em className="text-zinc-300 not-italic font-medium">how</em> you build from there."
         </motion.p>
       </div>
 

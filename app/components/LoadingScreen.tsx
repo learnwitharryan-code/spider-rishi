@@ -284,7 +284,7 @@ export default function LoadingScreen({
      with a time-based ceiling to ensure minimum display time */
   useEffect(() => {
     let frame: number;
-    const MIN_DISPLAY_MS = 4500; // Increased delay so it loads over ~4.5 seconds minimum
+    const MIN_DISPLAY_MS = 3000; // Reduced to 3 seconds for snappier mobile feel
 
     function tick() {
       /* Time-based ceiling: even if resources load instantly,

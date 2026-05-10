@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { getProject, projects } from "../../data/projects";
 import styles from "./project.module.css";
@@ -81,7 +82,7 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <main className={styles.shell}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <Script id="project-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <header className={styles.nav}>
         <Link href="/#work" className={styles.backLink}>
